@@ -4,7 +4,7 @@ class Header extends Component {
     render() {
         return(
             <div>
-                <h1>Ini Header</h1>
+                <h1>Belajar React JS</h1>
             </div>
         );
     }

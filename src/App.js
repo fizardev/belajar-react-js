@@ -1,14 +1,4 @@
-import Header from "./Header";
-import Content from "./Content";
-
-const Footer = () => {
-  return(
-    <div>
-      <h4>Ini Footer</h4>
-      <span>@2018</span>
-    </div>
-  )
-}
+import {Header, Content, Footer} from "./components/Index";
 
 function App() {
   return (

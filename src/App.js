@@ -1,27 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+
+class Header extends Component {
+  render() {
+    return (
+      <div>
+        <p>Ini header</p>
+      </div>
+    );
+  }
+}
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-    <div>
-      <h1>Hello React</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste molestiae est, quam, rem incidunt obcaecati inventore provident suscipit, hic eius architecto natus. Iusto placeat praesentium unde deleniti quaerat. Fugiat, saepe!</p>
+    <div className="App">
+      <Header/>
+      <h1>Halo Semuanya</h1>
     </div>
   );
 }

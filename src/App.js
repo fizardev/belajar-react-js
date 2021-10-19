@@ -1,14 +1,4 @@
-import React, { Component } from 'react'
-
-class Header extends Component {
-  render() {
-    return (
-      <div>
-        <p>Ini header</p>
-      </div>
-    );
-  }
-}
+import Header from "./Header";
 
 function App() {
   return (

@@ -1,12 +1,14 @@
-import * as All from "./components/Index";
+import * as Page from "./Page/Index";
 
 function App() {
   return (
     <div className="App">
-      <All.Header/>
-      <All.Top/>
-      <All.Content/>
-      <All.Footer nama="Masakan Nusantara" tahun="1990"/>
+      <Page.Header/>
+      <Page.MenuUtama/>
+      <Page.MenuMakanan/>
+      <Page.MenuTentangKami/>
+      <Page.MenuKontak/>
+      <Page.Footer/>
     </div>
   );
 }

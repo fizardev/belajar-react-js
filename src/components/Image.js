@@ -1,6 +1,6 @@
-const Image = () => {
+const Image = (props) => {
     return (
-        <img src="http://kbu-cdn.com/dk/wp-content/uploads/sate-ayam.jpg" alt="" srcset=""/>
+        <img src={props.linkgambar} alt="" width="400"/>
     );
 }
 

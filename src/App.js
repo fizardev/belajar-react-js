@@ -1,10 +1,11 @@
 import Header from "./Header";
+import Content from "./Content";
 
 const Footer = () => {
   return(
     <div>
       <h4>Ini Footer</h4>
-      <p>@2018</p>
+      <span>@2018</span>
     </div>
   )
 }
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <h1>Halo Semuanya</h1>
+      <Content/>
       <Footer/>
     </div>
   );

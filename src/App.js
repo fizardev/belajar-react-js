@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <Header/>
       <Content/>
-      <Footer/>
+      <Footer nama="Masakan Nusantara" tahun="1990"/>
     </div>
   );
 }

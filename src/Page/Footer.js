@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return(
         <div>
-            <h4>Tugas 2 React Js</h4>
+            <h4>Belajar React JS</h4>
         </div>
     );
 }

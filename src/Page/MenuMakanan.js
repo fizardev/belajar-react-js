@@ -3,10 +3,24 @@ import React, { Component } from "react";
 import ListMakanan from "../ListData/ListMakanan";
 
 class MenuMakanan extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            judul: "Daftar Makanan yang Kami Sediakan:",
+        }
+
+        this.rubahJudul = this.rubahJudul.bind(this);
+    }
+
+    rubahJudul() {
+        this.setState({judul: "Makanan tersedia:"});
+    }
     render() {
         return(
             <div>
-                <h3>Daftar Makanan yang Kami Sediakan: </h3>
+                <h3>{this.state.judul}</h3>
+                <button onClick={this.rubahJudul}>Rubah Judul</button>
                 <table>
                     <tbody>
                     <tr>

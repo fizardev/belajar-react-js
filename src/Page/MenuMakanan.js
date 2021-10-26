@@ -8,6 +8,7 @@ class MenuMakanan extends Component {
 
         this.state = {
             judul: "Daftar Makanan yang Kami Sediakan:",
+            inputValue: "Nasi Padang",
         }
 
         this.rubahJudul = this.rubahJudul.bind(this);
@@ -19,14 +20,17 @@ class MenuMakanan extends Component {
         this.handleChange(e);
     }
     handleChange(e) {
-        console.log(e.target.value);
+        this.setState({
+            inputValue: e.target.value,
+        });
+        
     }
     render() {
         return(
             <div>
-                <h3>{this.state.judul}</h3>
+                <h3>{this.state.inputValue}</h3>
                 <button onClick={this.rubahJudul}>Rubah Judul</button>
-                <input type="text" onChange={this.rubahJudul} />
+                <input type="text" onChange={this.rubahJudul} value={this.state.inputValue} />
                 <table>
                     <tbody>
                     <tr>

@@ -11,16 +11,22 @@ class MenuMakanan extends Component {
         }
 
         this.rubahJudul = this.rubahJudul.bind(this);
+        // this.handleChange = this.handleChange(this);
     }
 
-    rubahJudul() {
+    rubahJudul(e) {
         this.setState({judul: "Makanan tersedia:"});
+        this.handleChange(e);
+    }
+    handleChange(e) {
+        console.log(e.target.value);
     }
     render() {
         return(
             <div>
                 <h3>{this.state.judul}</h3>
                 <button onClick={this.rubahJudul}>Rubah Judul</button>
+                <input type="text" onChange={this.rubahJudul} />
                 <table>
                     <tbody>
                     <tr>

@@ -9,27 +9,45 @@ class MenuMakanan extends Component {
         this.state = {
             judul: "Daftar Makanan yang Kami Sediakan:",
             inputNama: "Fizar Rama Waluyo",
-            inputKota: "Majalengka"
+            inputKota: "Majalengka",
+            statusRendering: true,
         }
 
         this.rubahJudul = this.rubahJudul.bind(this);
-        // this.handleChange = this.handleChange(this);
+        this.rubahStatus = this.rubahStatus.bind(this);
     }
-
+    
     rubahJudul(e) {
         this.setState({judul: "Makanan tersedia:"});
         // this.handleChange(e);
+        console.log("gsss")
     }
     handleChange(inputValue, e) {
         // console.log(inputValue);
         this.setState({
             [inputValue]: e.target.value,
         });
-        
+    }
+    rubahStatus() {
+        this.setState((state, props) => {
+            return {statusRendering: !state.statusRendering}
+        })
     }
     render() {
         return(
             <div>
+                {this.state.statusRendering ? (
+                    <div>
+                        <h1>Selamat Datang</h1>
+                        <h3>Silahkan Pilih Menu</h3>
+                    </div>
+                ) : (
+                    <div>
+                        <h1>Selamat tinggal</h1>
+                        <h3>Silahkan datang kembali</h3>
+                    </div>
+                )}
+                <button onClick={this.rubahStatus}>Rubah Judul</button>
                 <h1>{this.state.judul}</h1>
                 <h3>{this.state.inputNama}</h3>
                 <h3>{this.state.inputKota}</h3>

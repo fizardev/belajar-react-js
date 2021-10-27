@@ -11,6 +11,28 @@ class MenuMakanan extends Component {
             inputNama: "Fizar Rama Waluyo",
             inputKota: "Majalengka",
             statusRendering: true,
+            menuMakanan: [
+                {
+                    linkImage: "https://s3-ap-southeast-1.amazonaws.com/niomic/img/sample/nasipadang.jpg",
+                    nama: "Nasi Padang"
+                },
+                {
+                    linkImage: "https://s3-ap-southeast-1.amazonaws.com/niomic/img/sample/sate.png",
+                    nama: "Sate Ayam"
+                },
+                {
+                    linkImage: "https://s3-ap-southeast-1.amazonaws.com/niomic/img/sample/sotolamongan.png",
+                    nama: "Soto Lamongan"
+                },
+                {
+                    linkImage: "https://www.dbs.com/iwov-resources/images/newsroom/indonesia/Blog/masakan%20nusantara/nasi%20kentut.png",
+                    nama: "Nasi Kentut"
+                },
+                {
+                    linkImage: "https://s3-ap-southeast-1.amazonaws.com/niomic/img/sample/food1.jpg",
+                    nama: "Medhoan"
+                },
+            ]
         }
 
         this.rubahJudul = this.rubahJudul.bind(this);
@@ -57,20 +79,17 @@ class MenuMakanan extends Component {
                 <table>
                     <tbody>
                     <tr>
+                        {
+                            this.state.menuMakanan.map((value, index) => {
+                                return (
+                                    <td key={index}>
+                                        <ListMakanan linkImage={value.linkImage} nama={value.nama} />
+                                    </td>
+                                )
+                            })
+                        }
                         <td>
-                            <ListMakanan linkImage="https://s3-ap-southeast-1.amazonaws.com/niomic/img/sample/nasipadang.jpg" nama="Nasi Padang" />
-                        </td>
-                        <td>
-                            <ListMakanan linkImage="https://s3-ap-southeast-1.amazonaws.com/niomic/img/sample/sate.png" nama="Sate" />
-                        </td>
-                        <td>
-                            <ListMakanan linkImage="https://s3-ap-southeast-1.amazonaws.com/niomic/img/sample/sotolamongan.png" nama="Soto Lamongan" />
-                        </td>
-                        <td>
-                            <ListMakanan linkImage="https://www.dbs.com/iwov-resources/images/newsroom/indonesia/Blog/masakan%20nusantara/nasi%20kentut.png" nama="Nasi Kentut"/>
-                        </td>
-                        <td>
-                            <ListMakanan linkImage="https://s3-ap-southeast-1.amazonaws.com/niomic/img/sample/food1.jpg" nama="Mendhoan" />
+                            
                         </td>
                     </tr>
                     </tbody>

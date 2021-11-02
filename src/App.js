@@ -1,14 +1,14 @@
-import * as Page from "./Page/Index";
+import Footer from "./Page/Footer";
+import Form from "./Page/Form";
+import Header from "./Page/Header";
+
 
 function App() {
   return (
     <div className="App">
-      <Page.Header/>
-      <Page.MenuUtama/>
-      <Page.MenuMakanan/>
-      <Page.MenuTentangKami/>
-      <Page.MenuKontak/>
-      <Page.Footer/>
+      <Header/>
+      <Form/>
+      <Footer/>
     </div>
   );
 }

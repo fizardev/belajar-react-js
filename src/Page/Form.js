@@ -9,6 +9,7 @@ class Form extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.textInput = React.createRef();
     }
 
     handleChange(e) {
@@ -20,13 +21,14 @@ class Form extends Component {
     handleSubmit(e) {
         e.preventDefault();
         alert('Pesan input: ' + this.state.value);
+        this.textInput.current.focus();
     }
     
     render() {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" onChange={this.handleChange} />
+                    <input type="text" onChange={this.handleChange} ref={this.textInput} />
                     <button type="submit">Submit</button>
                 </form>
             </div>

@@ -1,0 +1,13 @@
+#footer {
+    background-color: aliceblue;
+    color: #626262;
+    font-size: 50px;
+}
+
+.form-control {
+    padding: 10px 5px;
+    font-size: 18px;
+    color: #626262;
+    display: block;
+    border-radius: 10px;
+}

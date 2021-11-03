@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../Style/style.css';
 
 class Form extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class Form extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <input
+            className="form-control"
             type="text"
             onChange={this.handleChange}
             ref={this.textInput}
